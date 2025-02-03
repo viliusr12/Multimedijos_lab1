@@ -1,0 +1,2 @@
+# Multimedijos_lab1
+ 
