@@ -1,36 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset=utf-8/>
-<title>Lab 1. Introduction to HTML5 and HLS</title>
-  
-  <!--
-  Embed needed js libraries for video player. Note, libraries needs to be hosted on your server, under /js folder.
-   -->
-  <!--
-  Location for CSS if needed. Note, cascade style sheets needs to be hosted on your server, under /css folder.
-  -->
-   
-
-
+    <meta charset="utf-8"/>
+    <title>Lab 1. Introduction to HTML5 and HLS</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script defer src="js/player.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <h1>My first HLS player</h1>
-  
-  <!--
-  location for your player window
-  -->
-  
-	<button type="button">Play</button>
-	<button type="button">Pause</button>
-	<button type="button">Stop</button>
-	<button type="button">Jump to 5 sec forward</button>
-	<button type="button">Jump to 5 sec backwards</button>	
-	
-	<p>Playlist</p>
-	
-	<input type="text" name="url1" size="100" value="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8"><button type="button">Load</button><br>
-	<input type="text" name="url2" size="100" value="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8"><button type="button">Load</button><br>
-	<button type="button">Shuffle</button>
+    <h1>My first HLS player</h1>
+    
+    <video id="video" controls width="640" height="360"></video>
+    
+    <br>
+    <button id="play">Play</button>
+    <button id="pause">Pause</button>
+    <button id="stop">Stop</button>
+    <button id="forward">Jump to 5 sec forward</button>
+    <button id="backward">Jump to 5 sec backwards</button>
+    
+    <p>Playlist</p>
+    
+    <input type="text" id="url1" size="100" value="https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8">
+    <button class="load">Load</button>
+    <br>
+    <input type="text" id="url2" size="100" value="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8">
+    <button class="load">Load</button>
+    <br>
+    <button id="shuffle">Shuffle</button>
 </body>
 </html>
